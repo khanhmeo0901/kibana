@@ -1,0 +1,18 @@
+GET /_cat/indices?v
+
+GET /tesla_employees/_search
+{
+  "query":{
+   "match_all": {}
+  }
+}
+
+POST /tesla_employees/_create/1
+{
+"name": "Elon Musk",
+"age" : 49,
+"experienceInYears" : 28
+}
+
+- add đoạn mã xuống cuối elasticsearch.yml
+xpack.security.enabled: false
